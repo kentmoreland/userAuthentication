@@ -1,0 +1,17 @@
+{
+  "name": "user2",
+  "version": "1.0.0",
+  "description": "practice with user login setup ",
+  "main": "ul.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Kent Moreland <kentmoreland@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  }
+}
