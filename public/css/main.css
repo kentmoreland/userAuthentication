@@ -1,0 +1,22 @@
+html,
+body{
+  color: Sienna;
+  font-family: sans-serif;
+  height: 100%;
+
+}
+
+a {
+  color: SandyBrown;
+  text-decoration: none;
+}
+
+a:hover{
+  color: YellowGreen;
+}
+
+.page-wrapper {
+  background-color: MintCream;
+  padding: 15px;
+  height: 100%;
+}
