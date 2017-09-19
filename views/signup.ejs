@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ul Signup</title>
+</head>
+<body>
+    <div class="page-wrapper">
+    <section class="page-content">
+      <h1 class="page-title"> Signup </h1>
+
+      <% if (message.length > 0) { %>
+          <div class="alert alert-danger"><%= message %></div>
+      <% } %>
+
+
+      <form action="/signup" method="post">
+        <input type="text" name="email" placeholder="Email">
+
+        <input type="password" name="password" placeholder="Password">
+
+        <input type="submit" value="Signup">
+      </form>
+
+      <p>Already have an account? <a href="/login"></a></p>
+      <p>Or go <a href="/">home</a>.</p>
+    </section>
+  </div>
+</body>
+</html>
