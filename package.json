@@ -9,6 +9,7 @@
   "author": "Kent Moreland <kentmoreland@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.1",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
