@@ -39,5 +39,29 @@ module.exports = (passport) => {
       });
     });
   }));
-};
 
+  // LOGIN
+
+  passport.use('login', new LocalStrategy({
+    usernameField: 'email',
+    passwordField: 'password',
+    passReqToCallback: true,
+  },
+  (req, email, password, done) => {
+    User.findOne({ 'local.email': email }, (err, user) => {
+      if (err) {
+        return done(err);
+      }
+
+      if (!user) {
+        return done(null, false, req.flash('loginMessage', 'No user found.'));
+      }
+
+      if (!user.validPassword(password)) {
+        return done(null, false, req.flash('loginMessage', 'Oops! wrong password'));
+      }
+
+      return done(null, user);
+    });
+  }));
+};

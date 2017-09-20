@@ -14,7 +14,9 @@ router.get('/', routeController.getHomeView);
 router.get('/signup', routeController.getSignupView);
 router.post('/signup', routeController.newSignup);
 router.get('/login', routeController.getLoginView);
+router.post('/login', routeController.newLogin);
 router.get('/profile', isLoggedIn, routeController.getProfileView);
+router.get('/logout', routeController.getLogout);
 
 
 module.exports = router;

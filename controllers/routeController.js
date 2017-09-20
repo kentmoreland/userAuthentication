@@ -14,6 +14,12 @@ exports.newSignup = passport.authenticate('signup', {
   failureFlash: true,
 });
 
+exports.newLogin = passport.authenticate('login', {
+  successRedirect: '/profile',
+  failureredirect: '/signup',
+  failureFlash: true,
+});
+
 exports.getLoginView = (req, res) => {
   res.render('login', { message: req.flash('loginMessage') });
 };
@@ -24,7 +30,7 @@ exports.getProfileView = (req, res) => {
   });
 };
 
-exports.logout = (req, res) => {
+exports.getLogout = (req, res) => {
   req.logout();
   res.redirect('/');
 };
